@@ -1,0 +1,88 @@
+.inBetweenSection {
+  margin: 0;
+  padding: 0;
+}
+
+.aboutHeader {
+  font-family: "Nixie One";
+  font-size: min(6vw, 10vh);
+  margin-left: 30%;
+  margin-top: 30px;
+}
+
+.aboutSection {
+  padding: 40px;
+}
+
+.card {
+  color: oldlace;
+  background-color: #72415e;
+  margin-top: 50px;
+  margin-left: 50%;
+  margin-bottom: 40px;
+  width: clamp(300px, 40%, 600px);
+  font-family: Spinnaker;
+  padding: 20px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.projectsSection {
+  background-color: #212424;
+  color: oldlace;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard {
+  margin: 40px;
+  margin-bottom: 40px;
+  border: 4px solid #72415e;
+  border-radius: 8px;
+  width: clamp(300px, 40%, 600px);
+  box-sizing: content-box;
+}
+
+.projectTitle {
+  width: 100%;
+  background-color: #72415e;
+  color: oldlace;
+  padding: 8px;
+  font-family: "ABeeZee";
+  font-size: 1.6rem;
+}
+
+.projectImage {
+  width: 100%;
+  opacity: 0.8;
+}
+
+.projectImage:hover {
+  opacity: 1;
+}
+
+.projectText {
+  margin: 0;
+  padding: 8px;
+  font-size: 1.2rem;
+}
+
+.projectFooter {
+  background-color: #72415e;
+  padding: 8px;
+}
+
+.projectFooter a {
+  color: rgb(166, 166, 241);
+  text-decoration: underline dotted;
+}
+
+.projectFooter a:hover {
+  color: rgb(183, 183, 241);
+}
+
+.projectFooter a:active {
+  color: rgb(201, 201, 243);
+}

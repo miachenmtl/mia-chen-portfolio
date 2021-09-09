@@ -1,9 +1,11 @@
 import { ReactElement } from "react";
 import Link from "next/link";
 
+import styles from "../styles/Home.module.css";
+
 export default function NavMenu(): ReactElement {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>
         <li>
           <Link href="/about">
