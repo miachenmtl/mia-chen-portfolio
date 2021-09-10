@@ -4,8 +4,8 @@ import styles from "../styles/BottomScreen.module.css";
 
 export default function ContactButtons(): ReactElement {
   return (
-    <button type="button" className={styles.contactButton}>
+    <a href="mailto:mia.chen.mtl@gmail.com" className={styles.contactButton}>
       Contact
-    </button>
+    </a>
   );
 }

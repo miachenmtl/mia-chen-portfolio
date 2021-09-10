@@ -5,10 +5,10 @@ import styles from "../styles/InBetweenSection.module.css";
 export default function ProjectsSection() {
   return (
     <div className={styles.projectsSection}>
-      <h1>Projects</h1>
+      <h1 className={styles.header}>Projects</h1>
       <p>
-        Here are my most recent side projects. Further details can be found in
-        the readmes on Github.
+        Here are my most recent side projects. Check out the READMEs in the
+        GitHub repos for more details!
       </p>
       <ProjectCard
         title="Random Jumps"
@@ -17,7 +17,8 @@ export default function ProjectsSection() {
         demoLink="https://miachenmtl.github.io/random-jumps/"
       >
         Mini webapp using React to animate a knight's random walk on a
-        chessboard. I did this project to update my knowledge of React and its
+        chessboard. The goal of the project, besides giving something rather
+        mesmerizing to look at, was to update my knowledge of React and its
         ecosystem, including hooks and React Testing Library.
       </ProjectCard>
       <ProjectCard
@@ -25,16 +26,18 @@ export default function ProjectsSection() {
         imgSrc="/no-npm-install.jpg"
         src="https://github.com/miachenmtl/zero-dep-live-reload"
       >
-        Minimal node app for prototyping that serves html and triggers a page
-        reload when the html is updated. I used to just use `create-react-app`
-        when prototyping, but I got frustrated by how long it would take to
-        initialize an app and run `nom install`. I then used a blank HTML
-        template, but found myself missing hot reload, so I wondered if it was
-        possible to build a hot reload server using only the built-in node
-        libraries. I discovered that it is indeed possible (with the limitation
-        that it’s a simple page reload without maintaining state, i.e. live
-        reload and not hot reload), but there’s a reason people use libraries.
-        Setting up a websocket connection using only XXX was not easy!
+        <p>
+          Minimal node app for prototyping that serves html and triggers a page
+          reload when the html is updated.
+        </p>
+        <p>
+          I used to just use <code>create-react-app</code> when prototyping
+          because it's hard to live without hot reload, but I got frustrated by
+          how long it would take to initialize an app and then run `nom
+          install`. I asked myself, is it possible to build a hot reload server
+          using only the built-in node libraries? In brief, yes, it is, but
+          there's a reason people use libraries...
+        </p>
       </ProjectCard>
       <ProjectCard
         title="Portfolio"

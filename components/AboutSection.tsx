@@ -5,7 +5,7 @@ import styles from "../styles/InBetweenSection.module.css";
 export default function AboutSection() {
   return (
     <div className={styles.aboutSection}>
-      <h2 className={styles.aboutHeader}>About</h2>
+      <h2 className={styles.header}>About</h2>
       <Card>
         <p>
           Hi, I’m Mia Chen, a self-taught web developer with 3 years of web
