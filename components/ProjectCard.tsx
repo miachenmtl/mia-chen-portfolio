@@ -17,11 +17,22 @@ export default function ProjectCard({
   src,
   children,
 }: projectCardProps) {
+  const handleClick = () => {
+    window.open(demoLink || src, "_blank").focus();
+  };
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectTitle}>{title}</div>
-      <img className={styles.projectImage} src={imgSrc} />
-      <div className={styles.projectText}>{children}</div>
+      <div className={styles.projectSectionWrapper}>
+        <img
+          onClick={handleClick}
+          className={styles.projectImage}
+          src={imgSrc}
+        />
+      </div>
+      <div className={styles.projectSectionWrapper}>
+        <div className={styles.projectText}>{children}</div>
+      </div>
       <div className={styles.projectFooter}>
         {demoLink && (
           <>
