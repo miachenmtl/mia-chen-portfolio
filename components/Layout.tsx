@@ -1,14 +1,17 @@
-import type { ReactElement } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 import NavMenu from "./NavMenu";
-import Footer from "./Footer";
+import styles from "../styles/Home.module.css";
 
-export default function Layout({ children }): ReactElement {
+type LayoutProps = {
+  children: ReactNode;
+};
+
+export default function Layout({ children }: LayoutProps): ReactElement {
   return (
-  <>
-    <NavMenu />
-      <main>{children}</main>
-    <Footer />
-  </>
+    <div className={styles.appWrapper}>
+      <NavMenu />
+      {children}
+    </div>
   );
 }

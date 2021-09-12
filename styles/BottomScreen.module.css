@@ -1,0 +1,45 @@
+.bottomScreenBg {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+      circle at 20% 40%,
+      rgba(250, 87, 171, 0.6),
+      #72415e
+    ),
+    radial-gradient(circle at 80% 70%, rgb(255, 210, 116), transparent),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgb(250, 87, 171));
+}
+
+.bottomScreenBox {
+  display: inline-block;
+  position: relative;
+  left: 60%;
+  top: 60%;
+  padding: 30px;
+  color: oldlace;
+  background-color: rgba(68, 73, 73, 0.1);
+}
+
+.theEnd {
+  font-family: "Euphoria Script";
+  font-size: 2rem;
+}
+
+.contactButton {
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 20px 30px;
+  color: #72415e;
+  background-color: oldlace;
+  font-size: 1.6rem;
+}
+
+.contactButton:hover {
+  background-color: rgb(255, 239, 210);
+  cursor: pointer;
+}
+
+.contactButton:active {
+  background-color: rgb(255, 227, 174);
+}
