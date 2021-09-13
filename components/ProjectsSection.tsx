@@ -33,10 +33,10 @@ export default function ProjectsSection() {
         <p>
           I used to just use <code>create-react-app</code> when prototyping
           because it's hard to live without hot reload, but I got frustrated by
-          how long it would take to initialize an app and then run `nom
-          install`. I asked myself, is it possible to build a hot reload server
-          using only the built-in node libraries? In brief, yes, it is, but
-          there's a reason people use libraries...
+          how long it would take to initialize an app and then run{" "}
+          <code>npm install</code>. I asked myself, is it possible to build a
+          hot reload server using only the built-in node libraries? In brief,
+          yes, it is, but there's a reason people use libraries...
         </p>
       </ProjectCard>
       <ProjectCard

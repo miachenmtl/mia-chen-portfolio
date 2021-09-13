@@ -5,7 +5,7 @@ import Head from "next/head";
 export default function AppHead(): ReactElement {
   return (
     <Head>
-      <title>Create Next App</title>
+      <title>Mia Chen - Front End Web Dev</title>
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
       <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
