@@ -1,6 +1,7 @@
 import type { ReactElement, ReactNode } from "react";
 
 import NavMenu from "./NavMenu";
+import SocialButtons from "./SocialButtons";
 import styles from "../styles/Home.module.css";
 
 type LayoutProps = {
@@ -12,6 +13,7 @@ export default function Layout({ children }: LayoutProps): ReactElement {
     <div className={styles.appWrapper}>
       <NavMenu />
       {children}
+      <SocialButtons />
     </div>
   );
 }
