@@ -4,70 +4,100 @@
 }
 
 .header {
+  margin: 0;
+  padding: 0;
+  position: fixed;
   color: #f95fae;
   font-family: "Nixie One";
   font-size: clamp(2.5rem, 1.375rem + 5vw, 4rem);
-  margin-left: 30%;
-  margin-top: 30px;
+  left: 30%;
+  top: 10%;
 }
 
-.aboutSection {
-  padding: 40px;
+.header.projects {
+  left: auto;
+  right: 20%;
+  top: 8%;
 }
 
 .card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
   color: oldlace;
   background-color: #72415e;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  width: clamp(240px, 40%, 600px);
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  width: clamp(300px, 60%, 800px);
   font-family: Spinnaker;
   padding: 20px;
   font-size: clamp(1rem, 0.7rem + 1.3333vw, 1.4rem);
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .projectsSection {
-  background-color: #212424;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   color: oldlace;
+  background-color: rgba(9, 64, 116, 0.5);
+  opacity: 0;
   margin: 0;
   padding: 40px;
-  display: flex;
   font-size: clamp(1rem, 0.625rem + 1.6667vw, 1.5rem);
   flex-direction: column;
 }
 
+.projectsIntro {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  min-width: 300px;
+}
+
 .projectCard {
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
-  border: 4px solid #72415e;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  border: 4px solid #160c28;
+  background-color: #160c28;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  width: clamp(300px, 50%, 600px);
+  min-width: 300px;
+  width: 60%;
+  max-width: 800px;
   box-sizing: content-box;
 }
 
 .projectTitle {
-  width: 100%;
-  background-color: #72415e;
   color: oldlace;
   padding: 8px;
   font-family: "ABeeZee";
   font-size: clamp(1.2rem, 0.9rem + 1.3333vw, 1.6rem);
+  width: 100%;
 }
 
-.projectSectionWrapper {
-  background-color: #72415e;
+.projectBody {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.imageWrapper {
+  display: flex;
+  flex: 1 1 250px;
+  align-items: center;
 }
 
 .projectImage {
+  object-fit: cover;
   width: 100%;
+  height: 100%;
   opacity: 0.8;
   cursor: pointer;
-  background-color: #72415e;
   border-radius: 8px;
 }
 
@@ -78,13 +108,24 @@
 .projectText {
   margin: 0;
   padding: 8px;
-  font-size: clamp(1rem, 0.7rem + 1.3333vw, 1.4rem);
-  border-radius: 8px;
-  background-color: #212424;
+  flex: 1 1 250px;
+  font-size: clamp(1rem, 0.7rem + 1.3333vw, 1.2rem);
+  max-height: 250px;
+}
+
+@media (max-width: 640px) {
+  .projectImage {
+    max-height: 200px;
+  }
+
+  .projectText {
+    max-height: 200px;
+  }
 }
 
 .projectFooter {
-  background-color: #72415e;
+  background-color: #91396d;
+  margin: 8px;
   padding: 8px;
   font-size: clamp(1rem, 0.7rem + 1.3333vw, 1.4rem);
 }

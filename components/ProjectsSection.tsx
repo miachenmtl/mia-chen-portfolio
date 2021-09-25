@@ -1,16 +1,56 @@
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 import styles from "../styles/InBetweenSection.module.css";
 
+const HEADER_SCROLL_STOPS = [0.49, 0.53, 0.94, 0.98];
+
 export default function ProjectsSection() {
+  const { scrollYProgress } = useViewportScroll();
+
+  const x = useTransform(
+    scrollYProgress,
+    HEADER_SCROLL_STOPS,
+    [100, 0, 0, -100]
+  );
+  const y = useTransform(
+    scrollYProgress,
+    HEADER_SCROLL_STOPS,
+    [300, 0, 0, -100]
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    HEADER_SCROLL_STOPS,
+    [5, 1, 1, 0]
+  );
+  const opacity = useTransform(
+    scrollYProgress,
+    HEADER_SCROLL_STOPS,
+    [0, 1, 1, 0]
+  );
+  const subheadOpacity = useTransform(
+    scrollYProgress,
+    [0.49, 0.53, 0.57, 0.61],
+    [0, 1, 1, 0]
+  );
+
   return (
-    <div className={styles.projectsSection}>
-      <h1 className={styles.header}>Projects</h1>
-      <p>
+    <motion.div className={styles.projectsSection} style={{ opacity }}>
+      <motion.h1
+        className={`${styles.header} ${styles.projects}`}
+        style={{ x, y, scale, opacity }}
+      >
+        Projects
+      </motion.h1>
+      <motion.p
+        className={styles.projectsIntro}
+        style={{ opacity: subheadOpacity }}
+      >
         Here are my most recent side projects. Check out the READMEs in the
         GitHub repos for more details!
-      </p>
+      </motion.p>
       <ProjectCard
+        index={0}
         title="Random Jumps"
         imgSrc="/random-jumps.jpg"
         src="https://github.com/miachenmtl/random-jumps"
@@ -22,6 +62,7 @@ export default function ProjectsSection() {
         ecosystem, including hooks and React Testing Library.
       </ProjectCard>
       <ProjectCard
+        index={1}
         title="Zero-Dependency Live Reload Server"
         imgSrc="/no-npm-install.jpg"
         src="https://github.com/miachenmtl/zero-dep-live-reload"
@@ -40,6 +81,7 @@ export default function ProjectsSection() {
         </p>
       </ProjectCard>
       <ProjectCard
+        index={2}
         title="Portfolio"
         imgSrc="/portfolio-ss.jpg"
         src="https://github.com/miachenmtl/mia-chen-portfolio"
@@ -48,6 +90,6 @@ export default function ProjectsSection() {
         and is deployed to Vercel. Things look kinda rough right now, I'm still
         working on it!
       </ProjectCard>
-    </div>
+    </motion.div>
   );
 }
