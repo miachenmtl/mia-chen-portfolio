@@ -1,12 +1,22 @@
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import Card from "./Card";
 
 import styles from "../styles/InBetweenSection.module.css";
 
+const SCROLL_STOPS = [0.04, 0.14, 0.45, 0.5];
+
 export default function AboutSection() {
+  const { scrollYProgress } = useViewportScroll();
+  const y = useTransform(scrollYProgress, SCROLL_STOPS, [300, 0, 0, -100]);
+  const scale = useTransform(scrollYProgress, SCROLL_STOPS, [10, 1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, SCROLL_STOPS, [0, 1, 1, 0]);
+
   return (
     <div className={styles.aboutSection}>
-      <h2 className={styles.header}>About</h2>
-      <Card>
+      <motion.h2 className={styles.header} style={{ y, scale, opacity }}>
+        About
+      </motion.h2>
+      <Card index={1}>
         <p>
           Hi, I’m Mia Chen, a self-taught web developer with 3 years of web
           development experience living in Montréal. I started learning HTML and
@@ -18,7 +28,7 @@ export default function AboutSection() {
           in JavaScript history).
         </p>
       </Card>
-      <Card>
+      <Card index={2}>
         <p>
           After, I worked remotely for Tail Risk Analytics, a data science
           consultancy startup based in Singapore for three years. My main role
@@ -28,7 +38,7 @@ export default function AboutSection() {
           GraphQL. We used Git, Github, and Pivotal Tracker for collaboration.
         </p>
       </Card>
-      <Card>
+      <Card index={3}>
         <p>
           In my free time, I like to run a lot, and I enjoy preparing and eating
           vegan food. I’ve been into nerdy stuff my whole life. Currently, I am
