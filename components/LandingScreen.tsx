@@ -1,3 +1,5 @@
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+
 import Hero from "./Hero";
 import Sidekick from "./Sidekick";
 import Logo from "./Logo";
@@ -5,8 +7,11 @@ import Logo from "./Logo";
 import styles from "../styles/LandingScreen.module.css";
 
 export default function LandingScreen() {
+  const { scrollYProgress } = useViewportScroll();
+  const opacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
+
   return (
-    <header className={styles.fullScreenBackdrop}>
+    <motion.header className={styles.fullScreenBackdrop} style={{ opacity }}>
       <svg
         className={styles.noiseSvg}
         xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +44,6 @@ export default function LandingScreen() {
         <Sidekick />
         <Logo />
       </div>
-    </header>
+    </motion.header>
   );
 }
