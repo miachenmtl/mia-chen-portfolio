@@ -1,31 +1,38 @@
 .bottomScreenBg {
   position: fixed;
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: radial-gradient(
-      circle at 20% 40%,
-      rgba(250, 87, 171, 0.6),
-      #72415e
-    ),
-    radial-gradient(circle at 80% 70%, rgb(255, 210, 116), transparent),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgb(250, 87, 171));
+  background-image:
+    radial-gradient(circle at 22.71% 20.11%, #3D7EAA, transparent 81%),
+    radial-gradient(circle at 97.99% 51.05%, #FFE47A, transparent 83%),
+    radial-gradient(circle at 50% 50%, #84e00b, #84e00b 100%);
 }
 
 .bottomScreenBox {
-  display: inline-block;
-  position: relative;
-  padding: 30px;
-  color: oldlace;
-  background-color: rgba(68, 73, 73, 0.1);
-  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  mix-blend-mode: multiply;
+  background-color: midnightblue;
 }
 
 .theEnd {
   font-family: "Euphoria Script";
-  font-size: 2rem;
+  font-size: 33vmin;
+}
+
+.contactWrapper {
+  position: absolute;
+  right: 25%;
+  bottom: 25%;
 }
 
 .contactButton {
@@ -33,8 +40,8 @@
   border-radius: 8px;
   outline: none;
   padding: 20px 30px;
-  color: #72415e;
-  background-color: oldlace;
+  color: midnightblue;
+  background-color: rgb(255, 210, 116);
   font-size: 1.6rem;
 }
 

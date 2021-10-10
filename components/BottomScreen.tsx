@@ -13,6 +13,8 @@ export default function BottomScreen() {
     <motion.div className={styles.bottomScreenBg} style={{ x, opacity }}>
       <div className={styles.bottomScreenBox}>
         <p className={styles.theEnd}>The End!</p>
+      </div>
+      <div className={styles.contactWrapper}>
         <ContactButton />
       </div>
     </motion.div>

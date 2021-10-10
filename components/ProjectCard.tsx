@@ -52,7 +52,7 @@ export default function ProjectCard({
   const scale = useTransform(scrollYProgress, stops, [0, 1, 1, 0]);
   const opacity = useTransform(scrollYProgress, stops, [0, 1, 1, 0]);
   const handleClick = () => {
-    window.open(demoLink || src, "_blank").focus();
+    window.open(demoLink || src, "_blank")?.focus();
   };
   return (
     <motion.div

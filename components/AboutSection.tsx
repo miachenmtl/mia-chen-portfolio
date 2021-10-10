@@ -41,8 +41,7 @@ export default function AboutSection() {
       <Card index={3}>
         <p>
           In my free time, I like to run a lot, and I enjoy preparing and eating
-          vegan food. I’ve been into nerdy stuff my whole life. Currently, I am
-          seeking employment opportunities.
+          vegan food. I’ve been into nerdy stuff my whole life.
         </p>
       </Card>
     </div>
