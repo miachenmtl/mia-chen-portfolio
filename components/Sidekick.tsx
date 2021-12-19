@@ -1,6 +1,6 @@
 import styles from "../styles/LandingScreen.module.css";
 
-export default function Sidekick() {
+export default function Sidekick(): JSX.Element {
   return (
     <div className={styles.sidekick}>
       <ul className={styles.sidekickList}>

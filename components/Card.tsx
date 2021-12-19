@@ -1,14 +1,14 @@
-import type { useEffect, ReactNode, ReactElement } from "react";
+import * as React from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import styles from "../styles/InBetweenSection.module.css";
 
-interface cardProps {
+interface CardProps {
   index: number;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-export default function Card({ index, children }: cardProps): ReactElement {
+const Card = ({ index, children }: CardProps): JSX.Element => {
   const { scrollYProgress } = useViewportScroll();
   const initialStop = index * 0.12 - 0.02;
   const stops = [
@@ -36,4 +36,6 @@ export default function Card({ index, children }: cardProps): ReactElement {
       {children}
     </motion.div>
   );
-}
+};
+
+export default Card;

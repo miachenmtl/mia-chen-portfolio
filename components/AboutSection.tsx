@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import Card from "./Card";
 
@@ -5,7 +7,7 @@ import styles from "../styles/InBetweenSection.module.css";
 
 const SCROLL_STOPS = [0.04, 0.14, 0.45, 0.5];
 
-export default function AboutSection() {
+export const AboutSection = (): JSX.Element => {
   const { scrollYProgress } = useViewportScroll();
   const y = useTransform(scrollYProgress, SCROLL_STOPS, [300, 0, 0, -100]);
   const scale = useTransform(scrollYProgress, SCROLL_STOPS, [10, 1, 1, 0]);
@@ -46,4 +48,4 @@ export default function AboutSection() {
       </Card>
     </div>
   );
-}
+};

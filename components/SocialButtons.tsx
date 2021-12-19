@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 
-export default function SocialButtons() {
+export default function SocialButtons(): JSX.Element {
   return (
     <div className={styles.socialsBox}>
       <a
