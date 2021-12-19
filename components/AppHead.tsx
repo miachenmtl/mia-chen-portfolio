@@ -1,8 +1,8 @@
-import { ReactElement } from "react";
+import * as React from "react";
 
 import Head from "next/head";
 
-export default function AppHead(): ReactElement {
+export default function AppHead(): JSX.Element {
   return (
     <Head>
       <title>Mia Chen - Front End Web Dev</title>

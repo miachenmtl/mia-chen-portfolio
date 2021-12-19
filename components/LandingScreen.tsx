@@ -6,7 +6,7 @@ import Logo from "./Logo";
 
 import styles from "../styles/LandingScreen.module.css";
 
-export default function LandingScreen() {
+function LandingScreen(): JSX.Element {
   const { scrollYProgress } = useViewportScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
 
@@ -47,3 +47,5 @@ export default function LandingScreen() {
     </motion.header>
   );
 }
+
+export default LandingScreen;

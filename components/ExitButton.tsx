@@ -2,7 +2,7 @@ import { MouseEvent } from "react";
 import styles from "../styles/components.module.css";
 
 interface ExitButtonProp {
-  callback: (e: MouseEvent) => void;
+  callback: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const ExitButton = ({ callback }: ExitButtonProp): JSX.Element => {

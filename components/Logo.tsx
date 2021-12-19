@@ -1,6 +1,6 @@
 import styles from "../styles/LandingScreen.module.css";
 
-export default function Logo() {
+export default function Logo(): JSX.Element {
   return (
     <div className={styles.logo}>
       <span className={styles.initialM}>

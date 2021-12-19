@@ -20,7 +20,7 @@ export default function ProjectCard({
   demoLink = "",
   src,
   children,
-}: projectCardProps) {
+}: projectCardProps): JSX.Element {
   const [hasScroll, setHasScroll] = useState(false);
   const { scrollYProgress } = useViewportScroll();
   const initialStop = index * 0.11 + 0.61;
@@ -51,7 +51,7 @@ export default function ProjectCard({
   ]);
   const scale = useTransform(scrollYProgress, stops, [0, 1, 1, 0]);
   const opacity = useTransform(scrollYProgress, stops, [0, 1, 1, 0]);
-  const handleClick = () => {
+  const handleClick = (): void => {
     window.open(demoLink || src, "_blank")?.focus();
   };
   return (
