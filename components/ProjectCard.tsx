@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import styles from "../styles/InBetweenSection.module.css";
@@ -7,7 +8,7 @@ import styles from "../styles/InBetweenSection.module.css";
 type projectCardProps = {
   index: number;
   title: string;
-  imgSrc: string;
+  imgSrc: StaticImageData;
   src: string;
   demoLink?: string;
   children: ReactNode;
@@ -62,10 +63,12 @@ export default function ProjectCard({
       <div className={styles.projectTitle}>{title}</div>
       <div className={styles.projectBody}>
         <div className={styles.imageWrapper}>
-          <img
+          <Image
             onClick={handleClick}
             className={styles.projectImage}
             src={imgSrc}
+            layout="fill"
+            objectFit="cover"
           />
         </div>
         <div
