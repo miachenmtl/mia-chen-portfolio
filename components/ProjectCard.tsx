@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import styles from "../styles/InBetweenSection.module.css";
@@ -64,11 +64,12 @@ export default function ProjectCard({
       <div className={styles.projectBody}>
         <div className={styles.imageWrapper}>
           <Image
+            alt="random alt text"
             onClick={handleClick}
             className={styles.projectImage}
             src={imgSrc}
-            layout="fill"
-            objectFit="cover"
+            sizes="100vw"
+            fill
           />
         </div>
         <div

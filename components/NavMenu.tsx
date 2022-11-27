@@ -8,19 +8,13 @@ export default function NavMenu(): ReactElement {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/about">
-            <a>about</a>
-          </Link>
+          <Link href="/about">about</Link>
         </li>
         <li>
-          <Link href="/projects">
-            <a>projects</a>
-          </Link>
+          <Link href="/projects">projects</Link>
         </li>
         <li>
-          <Link href="/CV">
-            <a>cv</a>
-          </Link>
+          <Link href="/CV">cv</Link>
         </li>
       </ul>
     </nav>
